@@ -1,0 +1,70 @@
+{
+    "majors": [
+        {
+            "id": 1,
+            "name": "physics",
+            "description": "This is a physics",
+            "offered": "Yes"
+        },
+        {
+            "id": 2,
+            "name": "computer science",
+            "description": "This is a computer science",
+            "offered": "Yes"
+        },
+        {
+            "id": 3,
+            "name": "chemistry",
+            "description": "This is a chemistry",
+            "offered": "No"
+        },
+        {
+            "id": 4,
+            "name": "maths",
+            "description": "This is a maths",
+            "offered": "Yes"
+        },
+        {
+            "id": 5,
+            "name": "mathematics",
+            "description": "This is a mathematics",
+            "offered": "No"
+        },
+        {
+            "id": 6,
+            "name": "biology",
+            "description": "This is a biology",
+            "offered": "Yes"
+        },
+        {
+            "id": 7,
+            "name": "geology",
+            "description": "This is a geology",
+            "offered": "Yes"
+        },
+        {
+            "id": 8,
+            "name": "education",
+            "description": "This is a education",
+            "offered": "No"
+        },
+        {
+            "id": 9,
+            "name": "english",
+            "description": "This is a english",
+            "offered": "No"
+        },
+        {
+            "id": 10,
+            "name": "literature",
+            "description": "This is a literature",
+            "offered": "Yes"
+        },
+        {
+            "id": 11,
+            "name": "communication",
+            "description": "This is a communication",
+            "offered": "Yes"
+        }
+    ]
+}

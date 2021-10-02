@@ -1,0 +1,181 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - yo
+    - hey there
+    - whats up
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: whats_up
+  examples: |
+    - how are you
+    - whats up
+    - how are you doing
+    - how is it going
+    - are you there
+    - how are things going
+    - are you around
+    - what's up
+    - sup
+    - are you around?
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: help
+  examples: |
+    - how can you help me?
+    - what is this for?
+    - can you help me?
+    - whats your use?
+    - what can you do for me?
+    - can you provide me an assistance?
+
+- intent: problem
+  examples: |
+    - my computer does not work
+    - computer broke
+    - laptop doesnt open
+    - laptop is down
+    - computer does not turn on
+    - help me open my computer
+    - computer froze
+    - how can i make my computer work
+    - computer is gone
+
+- intent: dell
+  examples: |
+    - dell
+    - Dell Laptop
+    - Dell Monitor
+
+- intent: hp
+  examples: |
+    - hp
+    - HP Laptop
+    - HP Monitor
+
+- intent: lenovo
+  examples: |
+    - lenovo
+    - Lenovo Laptop
+    - Lenovo Monitor
+
+- intent: windows10
+  examples: |
+    - Windows 10
+    - 10
+
+- intent: windows8
+  examples: |
+    - Windows 8
+    - 8
+
+- intent: windows7
+  examples: |
+    - Windows 7
+    - 7
+
+- intent: windowsxp
+  examples: |
+    - Windows XP
+    - XP
+
+- intent: complete
+  examples: |
+    - The problem is solved
+    - Thank you for helping me. Its solved
+    - It works now
+    - Finally, it started working
+    - My computer works
+    - Awesome, its working again
+    - That solution worked
+    
+- intent: long_feedback
+  examples: |
+    - long feedback
+    - give feedback
+    - start feedback

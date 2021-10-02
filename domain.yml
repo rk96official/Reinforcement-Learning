@@ -1,0 +1,214 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- welcome:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- help:
+    use_entities: true
+- whats_up:
+    use_entities: true
+- problem:
+    use_entities: true
+- dell:
+    use_entities: true
+- hp:
+    use_entities: true
+- lenovo:
+    use_entities: true
+- windows10:
+    use_entities: true
+- windows8:
+    use_entities: true
+- windows7:
+    use_entities: true
+- windowsxp:
+    use_entities: true
+- complete:
+    use_entities: true
+- long_feedback:
+    use_entities: true
+- short_feedback:
+    use_entities: true
+entities: []
+slots:
+  rating:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  rating_quick:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  influence:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+  support_feedback:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_welcome_message:
+  - text: Hello and welcome to our Tech Support! How may I help you?
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_help:
+  - text: I am here to help you troubleshoot your computer. What problem do you have?
+  utter_whatsup:
+  - text: I am great. You?
+  utter_brand:
+  - buttons:
+    - payload: /dell
+      title: Dell
+    - payload: /hp
+      title: Hp
+    - payload: /lenovo
+      title: Lenovo
+    text: What is your computer's brand?
+  utter_windows_version:
+  - buttons:
+    - payload: /windows10
+      title: Windows 10
+    - payload: /windows8
+      title: Windows 8
+    - payload: /windows7
+      title: Windows 7
+    - payload: /windowsxp
+      title: Windows XP
+    text: What is the version of the windows on your computer?
+  utter_windows10:
+  - text: Hey
+  utter_windows8:
+  - text: Restart the computer!
+  utter_windows7:
+  - text: Restart the computer!
+  utter_windowsxp:
+  - text: Restart the computer!
+  utter_complete:
+  - text: Thats good to hear!
+  utter_feedback:
+  - buttons:
+    - payload: /long_feedback
+      title: okay
+    - payload: /short_feedback
+      title: not now
+    text: Would like to provide a review of our customer service?
+  utter_ask_rating:
+  - buttons:
+    - payload: '1'
+      title: 1️⃣
+    - payload: '2'
+      title: 2️⃣
+    - payload: '3'
+      title: 3️⃣
+    - payload: '4'
+      title: 4️⃣
+    - payload: '5'
+      title: 5️⃣
+    - payload: '6'
+      title: 👏👏👏😍
+    text: How was your experience with us?
+  utter_thanks:
+  - text: Thanks
+  utter_sorry:
+  - text: Sorry to hear this
+  utter_awesome:
+  - text: Awesome!
+  utter_ask_influence:
+  - text: |-
+      Sorry to hear this. 
+
+      Can you help me understand what influenced your rating?
+  utter_influence_done:
+  - text: Thanks for bringing this issue to our attention.
+  utter_ask_support_feedback:
+  - text: Do you have any other feedback to share about our 24/7 support desk?
+  utter_ask_rating_quick:
+  - buttons:
+    - payload: '1'
+      title: 1️⃣
+    - payload: '2'
+      title: 2️⃣
+    - payload: '3'
+      title: 3️⃣
+    - payload: '4'
+      title: 4️⃣
+    - payload: '5'
+      title: 5️⃣
+    - payload: '6'
+      title: 👏👏👏😍
+    text: I understand. Can we do this real quick? Just choose the rating you would like to give, and we say goodbye.
+  utter_pre_finish:
+  - text: Thank you for your time with us.
+  utter_finish:
+  - text: I’m sharing the information on your behalf with our team. Have a nice day!
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_help
+- utter_whatsup
+- utter_iamabot
+- utter_brand
+- utter_windows_version
+- utter_windows10
+- utter_windows8
+- utter_windows7
+- utter_windowsxp
+- utter_complete
+- utter_feedback
+- utter_thanks
+- utter_sorry
+- utter_awesome
+- utter_influence_done
+- utter_pre_finish
+- utter_finish
+- form_get_rating
+- form_get_rating_quick
+- form_get_influence
+- form_get_support_feedback
+forms:
+  form_get_rating:
+    required_slots: {}
+  form_get_rating_quick:
+    required_slots: {}
+  form_get_influence:
+    required_slots: {}
+  form_get_support_feedback:
+    required_slots: {}
+e2e_actions: []

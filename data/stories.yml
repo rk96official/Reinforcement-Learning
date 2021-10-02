@@ -1,0 +1,176 @@
+version: "2.0"
+
+stories:
+  
+- story: happy path
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_welcome_message
+
+- story: dell windows 10
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: dell
+  - action: utter_windows_version
+  - intent: windows10
+  - action: utter_windows10
+
+- story: dell windows 8
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: dell
+  - action: utter_windows_version
+  - intent: windows8
+  - action: utter_windows8
+
+- story: dell windows 7
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: dell
+  - action: utter_windows_version
+  - intent: windows7
+  - action: utter_windows7
+
+- story: dell windows XP
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: dell
+  - action: utter_windows_version
+  - intent: windowsxp
+  - action: utter_windowsxp
+
+- story: hp windows 10
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: hp
+  - action: utter_windows_version
+  - intent: windows10
+  - action: utter_windows10
+
+- story: hp windows 8
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: hp
+  - action: utter_windows_version
+  - intent: windows8
+  - action: utter_windows8
+
+- story: hp windows 7
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: hp
+  - action: utter_windows_version
+  - intent: windows7
+  - action: utter_windows7
+
+- story: hp windows XP
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: hp
+  - action: utter_windows_version
+  - intent: windowsxp
+  - action: utter_windowsxp
+
+- story: lenovo windows 10
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: lenovo
+  - action: utter_windows_version
+  - intent: windows10
+  - action: utter_windows10
+
+- story: lenovo windows 8
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: lenovo
+  - action: utter_windows_version
+  - intent: windows8
+  - action: utter_windows8
+
+- story: lenovo windows 7
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: lenovo
+  - action: utter_windows_version
+  - intent: windows7
+  - action: utter_windows7
+
+- story: lenovo windows XP
+  steps:
+  - intent: problem
+  - action: utter_brand
+  - intent: lenovo
+  - action: utter_windows_version
+  - intent: windowsxp
+  - action: utter_windowsxp
+
+- story: long feedback
+  steps:
+  - intent: complete
+  - action: utter_feedback
+  - intent: long_feedback
+  - action: utter_thanks
+  - action: form_get_rating
+  - active_loop: form_get_rating
+  - active_loop: null
+  - action: form_get_influence
+  - active_loop: form_get_influence
+  - active_loop: null
+  - action: form_get_support_feedback
+  - active_loop: form_get_support_feedback
+  - active_loop: null
+  - action: utter_pre_finish
+  - action: utter_finish
+
+- story: short feedback
+  steps:
+  - intent: complete
+  - action: utter_feedback
+  - intent: short_feedback
+  - action: form_get_rating_quick
+  - active_loop: form_get_rating_quick
+  - active_loop: null
+  - action: utter_pre_finish
+  - action: utter_finish

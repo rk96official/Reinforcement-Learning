@@ -1,0 +1,16 @@
+
+version: "2.0"
+nlu:
+  - lookup: major_name
+    examples: | 
+      - physics
+      - computers
+      - chemistry
+      - maths
+      - mathematics
+      - biology
+      - geology
+      - education
+      - english
+      - literature
+      - communication
