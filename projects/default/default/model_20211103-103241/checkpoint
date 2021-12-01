@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/rupakkadel/Documents/Rasa/./projects/default/default/model_20211103-103241/component_5_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "/Users/rupakkadel/Documents/Rasa/./projects/default/default/model_20211103-103241/component_5_EmbeddingIntentClassifier.ckpt"

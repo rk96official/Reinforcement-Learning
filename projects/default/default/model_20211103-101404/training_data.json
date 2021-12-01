@@ -1,0 +1,97 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "help",
+        "text": "how can you help me?"
+      },
+      {
+        "intent": "help",
+        "text": "can you provide me an assistance?"
+      },
+      {
+        "intent": "help",
+        "text": "what can you do for me?"
+      },
+      {
+        "intent": "General_Agent_Purpose",
+        "text": "Hello I am looking for some help here"
+      },
+      {
+        "intent": "problem",
+        "text": "my computer does not work"
+      },
+      {
+        "intent": "problem",
+        "text": "computer does not turn on"
+      },
+      {
+        "intent": "problem",
+        "text": "help me open my computer"
+      },
+      {
+        "intent": "problem",
+        "text": "computer froze"
+      },
+      {
+        "intent": "problem",
+        "text": "laptop is down"
+      },
+      {
+        "intent": "problem",
+        "text": "computer is gone"
+      },
+      {
+        "intent": "computer_type",
+        "text": "Dell Laptop"
+      },
+      {
+        "intent": "computer type",
+        "text": "Lenovo Laptop"
+      },
+      {
+        "intent": "computer_type",
+        "text": "HP Laptop"
+      },
+      {
+        "intent": "operating_system",
+        "text": "Windows 10"
+      },
+      {
+        "intent": "operating_system",
+        "text": "Windows 7"
+      },
+      {
+        "intent": "operating_system",
+        "text": "Windows 8"
+      },
+      {
+        "intent": "complete",
+        "text": "Thank you for helping me. Its solved"
+      },
+      {
+        "intent": "complete",
+        "text": "Finally, it started working"
+      },
+      {
+        "intent": "complete",
+        "text": "Awesome, its working again"
+      },
+      {
+        "intent": "complete",
+        "text": "That solution worked"
+      },
+      {
+        "intent": "complete",
+        "text": "My computer works"
+      },
+      {
+        "intent": "complete",
+        "text": "The problem is solved"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

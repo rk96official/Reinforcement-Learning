@@ -1,0 +1,24 @@
+,confidence,feedback,intent,response,utterance,gold response
+7,1,0,complete,"Thank you for using our service.",The problem is solved.,complete
+15,0.9,0,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen",Computer does not open,problem
+28,1,0,greet,"Hi, I am good. What about you?",HOw are you today?,greet
+39,1,0,choose_version,"What version of windows ",I have windows 7,choose_version
+72,0.36,1,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen",where can I find my dell computer ,No intent detected
+91,0.56,0,goodbye,Bye bye! Thanks for the chat!,"Thank you, bye ! ",goodbye
+111,0.42,1,complete,"Thank you for using our service.",Where is the Apple shop?,No intent detected
+113,0.67,1,complete,"Thank you for using our service.",It works now.,complete
+119,0.79,0,goodbye,Bye bye! Thanks for the chat!,I am glad that you are happy to hear that,goodbye
+121,0.46,0,goodbye,Bye bye! Thanks for the chat!,Ciao,goodbye
+177,0.37,1,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen",Do we have a laptop? ,No intent detected
+181,0.61,0,complete,"Thank you for using our service.",Wow it works finally. ,complete
+212,0.47,1,choose_version,"What version of windows ",Windows,choose_version
+219,0.45,1,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen","I have a problem with my computer, where can I go ?",No intent detected
+261,0.39,0,help,"I can help you with computer troubleshooting related questions.",What is Concurrency? ,No intent detected
+280,0.65,0,help,"I can help you with computer troubleshooting related questions.",Can you tell more about your services? ,help
+311,0.81,0,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen",It does not turn on ,problem
+322,0.52,0,complete,"Thank you for using our service.",It is definitely not working ,No intent detected
+361,0.5,1,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen",Can we have two different laptops ? ,No intent detected
+364,0.39,0,help,"I can help you with computer troubleshooting related questions.",How can you help me?,help
+421,0.56,0,help,"I can help you with computer troubleshooting related questions.",Do you know about computer troubleshooting? ,help
+426,0.39,0,greet,"Hi, I am good. What about you?",How are u feelin ? ,greet
+462,0.36,1,problem,"Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen",Where can  I find Dell laptops? ,No intent detected

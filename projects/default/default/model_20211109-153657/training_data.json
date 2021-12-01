@@ -1,0 +1,158 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "Hey"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey dude"
+      },
+      {
+        "intent": "greet",
+        "text": "Good Morning"
+      },
+      {
+        "intent": "greet",
+        "text": "Good Afternoon"
+      },
+      {
+        "intent": "greet",
+        "text": "Whats up"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "How are you"
+      },
+      {
+        "intent": "greet",
+        "text": "How are things going?"
+      },
+      {
+        "intent": "greet",
+        "text": "Are you around"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Good night"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bye bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you around"
+      },
+      {
+        "intent": "help",
+        "text": "How can you help me?"
+      },
+      {
+        "intent": "help",
+        "text": "Whats your use?"
+      },
+      {
+        "intent": "help",
+        "text": "Can you provide me an assistance?"
+      },
+      {
+        "intent": "help",
+        "text": "What can you do for me?"
+      },
+      {
+        "intent": "problem",
+        "text": "My computer does not work"
+      },
+      {
+        "intent": "problem",
+        "text": "Laptop doesnt open"
+      },
+      {
+        "intent": "problem",
+        "text": "Computer does not turn on"
+      },
+      {
+        "intent": "problem",
+        "text": "Help me open my computer"
+      },
+      {
+        "intent": "problem",
+        "text": "Laptop is down"
+      },
+      {
+        "intent": "complete",
+        "text": "The problem is solved"
+      },
+      {
+        "intent": "complete",
+        "text": "The problem is solved"
+      },
+      {
+        "intent": "complete",
+        "text": "It works now"
+      },
+      {
+        "intent": "complete",
+        "text": "Thank you for helping me"
+      },
+      {
+        "intent": "complete",
+        "text": "My computer works"
+      },
+      {
+        "intent": "complete",
+        "text": "Finally, it started working"
+      },
+      {
+        "intent": "complete",
+        "text": "Awesome, its working again."
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": [
+      {
+        "value": "external",
+        "synonyms": [
+          "external device",
+          "external keyboard"
+        ]
+      },
+      {
+        "value": "computer",
+        "synonyms": [
+          "laptop",
+          "device",
+          "monitor",
+          "screen",
+          "pc",
+          "mac"
+        ]
+      },
+      {
+        "value": "no",
+        "synonyms": [
+          "Nope",
+          "Not"
+        ]
+      },
+      {
+        "value": "yes",
+        "synonyms": [
+          "Yes",
+          "Yea"
+        ]
+      }
+    ]
+  }
+}

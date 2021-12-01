@@ -1,0 +1,14 @@
+{
+  "external device": "external",
+  "external keyboard": "external",
+  "laptop": "computer",
+  "device": "computer",
+  "monitor": "computer",
+  "screen": "computer",
+  "pc": "computer",
+  "mac": "computer",
+  "nope": "no",
+  "not": "no",
+  "yes": "yes",
+  "yea": "yes"
+}

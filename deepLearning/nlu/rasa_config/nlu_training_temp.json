@@ -1,0 +1,235 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hey dude",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Good Morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Good Afternoon",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Whats up",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hello there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "How are you",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "How are things going?",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Are you around",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "see you later",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Good night",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "see you around",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "How can you help me?",
+        "intent": "help",
+        "entities": []
+      },
+      {
+        "text": "Whats your use?",
+        "intent": "help",
+        "entities": []
+      },
+      {
+        "text": "Can you provide me an assistance?",
+        "intent": "help",
+        "entities": []
+      },
+      {
+        "text": "What can you do for me?",
+        "intent": "help",
+        "entities": []
+      },
+      {
+        "text": "My computer version is Windows 7.",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "My computer version is Windows 8.",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "My computer version is Windows 10.",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "My computer version is Windows 11.",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "Windows 7",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "Windows 10",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "Windows 8",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "Windows XP",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "Windows",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "Microsoft",
+        "intent": "problem" ,
+        "entities": []
+      },
+      {
+        "text": "My computer does not work",
+        "intent": "choose_version",
+        "entities": []
+      },
+      {
+        "text": "Laptop doesnt open",
+        "intent": "choose_version",
+        "entities": []
+      },
+      {
+        "text": "Computer does not turn on",
+        "intent": "choose_version",
+        "entities": []
+      },
+      {
+        "text": "Help me open my computer",
+        "intent": "choose_version",
+        "entities": []
+      },
+      {
+        "text": "Laptop is down",
+        "intent": "choose_version",
+        "entities": []
+      },
+      {
+        "text": "The problem is solved",
+        "intent": "complete",
+        "entities": []
+      },
+      {
+        "text": "The problem is solved",
+        "intent": "complete",
+        "entities": []
+      },
+      {
+        "text": "It works now",
+        "intent": "complete",
+        "entities": []
+      },
+      {
+        "text": "Thank you for helping me",
+        "intent": "complete",
+        "entities": []
+      },
+      {
+        "text": "My computer works",
+        "intent": "complete",
+        "entities": []
+      },
+      {
+        "text": "Finally, it started working",
+        "intent": "complete",
+        "entities": []
+      },
+      {
+        "text": "Awesome, its working again.",
+        "intent": "complete",
+        "entities": []
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "external",
+        "synonyms": [
+          "external device",
+          "external keyboard"
+        ]
+      },
+      {
+        "value": "computer",
+        "synonyms": [
+          "laptop",
+          "device",
+          "monitor",
+          "screen",
+          "pc",
+          "mac"
+        ]
+      },
+      {
+        "value": "no",
+        "synonyms": [
+          "Nope",
+          "Not"
+        ]
+      },
+      {
+        "value": "yes",
+        "synonyms": [
+          "Yes",
+          "Yea"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+,intent,response
+0,complete, "Thank you for using our service."
+1,help,"I can help you with computer troubleshooting related questions."
+2,goodbye,Bye bye! Thanks for the chat!
+3,greet,"Hi, I am good. Hope you are good as well."
+4,problem,Please follow this solution: https://www.dell.com/support/kbdoc/en-us/000132142/windows-10-crashes-to-a-blue-screen
+5,No intent detected,"Sorry, I can't help you with that."
