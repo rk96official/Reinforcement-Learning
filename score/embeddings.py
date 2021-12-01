@@ -1,19 +1,19 @@
 import numpy as np
-from nltk.corpus import stopwords 
+from nltk.corpus import stopwords
 from nltk.tokenize import RegexpTokenizer
 import tensorflow as tf
 import tensorflow_hub as hub
 
 
 class embeddings(object):
-    def __init__(self, texts, extend_vocab = False, embed_par='gloves'):
+    def __init__(self, texts, extend_vocab=False, embed_par='gloves'):
         self.STOP = set(stopwords.words('english'))
         self.embed_par = embed_par
         self.extend_vocab = extend_vocab
         if embed_par == 'gloves':
             self._glove_embeddings(texts)
         elif embed_par == 'tf':
-            print('Loading TF hub embeddings') 
+            print('Loading TF hub embeddings')
             self.embed = hub.Module("https://tfhub.dev/google/universal-sentence-encoder/1")
 
     def fit(self, texts):
@@ -23,13 +23,14 @@ class embeddings(object):
                 words = self._tokenizer(text)
                 embeds.append(self._BoW(words))
             return np.array(embeds)
-        elif self.embed_par =='tf':
+        elif self.embed_par == 'tf':
             return self._tf_embeddings(texts)
 
     def _glove_embeddings(self, texts):
         words_to_index, index_to_words, word_to_vec_map = read_glove_vecs("deep_dialog/nlu/glove.6B.50d.txt")
         if self.extend_vocab:
-            words_to_index, index_to_words, word_to_vec_map, new_vocab = increase_vocab(words_to_index, index_to_words, word_to_vec_map, texts)
+            words_to_index, index_to_words, word_to_vec_map, new_vocab = increase_vocab(words_to_index, index_to_words,
+                                                                                        word_to_vec_map, texts)
         self.words_to_index = words_to_index
         self.index_to_words = index_to_words
         self.word_to_vec_map = word_to_vec_map
@@ -37,12 +38,12 @@ class embeddings(object):
         self.vocab_size = len(words_to_index)
 
     def _tokenizer(self, text, special_chars=['<br']):
-           for spch in special_chars:
-               text = text.replace(spch,'')
-           tokenizer = RegexpTokenizer(r'\w+')
-           tokens = tokenizer.tokenize(text.lower())
-           words = np.array([w for w in tokens if w not in self.STOP])
-           return words
+        for spch in special_chars:
+            text = text.replace(spch, '')
+        tokenizer = RegexpTokenizer(r'\w+')
+        tokens = tokenizer.tokenize(text.lower())
+        words = np.array([w for w in tokens if w not in self.STOP])  # tokens without stopwords
+        return words
 
     def _BoW(self, words, wei=None):
         if wei is None:
@@ -53,24 +54,24 @@ class embeddings(object):
             return avg
         for i, w in enumerate(words):
             if w in self.word_to_vec_map:
-                avg += wei[i]*self.word_to_vec_map[w]
+                avg += wei[i] * self.word_to_vec_map[w]
             else:
                 continue
-            sum_wei  = sum_wei +  wei[i]
-        embeds = avg/float(sum_wei)
+            sum_wei = sum_wei + wei[i]
+        embeds = avg / float(sum_wei)
         return embeds
 
-    def _tf_embeddings(self,texts):
+    def _tf_embeddings(self, texts):
         print('Computing embeddings in Tensorflow...')
         N = np.shape(texts)[0]
-        messages = tf.placeholder(dtype=tf.string, shape =[N])
+        messages = tf.placeholder(dtype=tf.string, shape=[N])
         embeddings = self.embed(messages)
         with tf.Session() as session:
             session.run([tf.global_variables_initializer(), tf.tables_initializer()])
             sentence_embeddings = session.run(embeddings, feed_dict={messages: texts})
         self.embed_size = np.shape(sentence_embeddings)[1]
         return sentence_embeddings
-    
+
 
 def read_glove_vecs(glove_file):
     with open(glove_file, 'r', encoding="utf8") as f:
@@ -97,11 +98,11 @@ def increase_vocab(words_to_index, index_to_words, word_to_vec_map, project):
     new_vocab = []
     s = size_vocab
     for sentence in project:
-        sentence = sentence.replace('ffwd','fast forward')
-        sentence = sentence.replace('FFWD','fast forward')
+        sentence = sentence.replace('ffwd', 'fast forward')
+        sentence = sentence.replace('FFWD', 'fast forward')
         sentence = sentence.replace("KPI", "key performance metric")
         sentence = sentence.replace("KPIs", "key performance metric")
-        sentence = sentence.replace('omnichannel','omni channel')
+        sentence = sentence.replace('omnichannel', 'omni channel')
         tokenizer = RegexpTokenizer(r'\w+')
         tokens = tokenizer.tokenize(sentence.lower())
         words = [w for w in tokens if w not in STOP]
@@ -111,6 +112,6 @@ def increase_vocab(words_to_index, index_to_words, word_to_vec_map, project):
                 words_to_index[w] = s
                 index_to_words[s] = w
                 ran = np.random.rand(50)
-                ran = ran*2-1
+                ran = ran * 2 - 1
                 word_to_vec_map[w] = ran
     return words_to_index, index_to_words, word_to_vec_map, new_vocab
